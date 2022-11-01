@@ -29,6 +29,7 @@ class Street(Model):
     city = ForeignKey(
         City,
         on_delete=CASCADE,
+        related_name='streets',
         verbose_name='Город улицы',
     )
 
@@ -51,11 +52,13 @@ class Shop(Model):
     city = ForeignKey(
         City,
         on_delete=CASCADE,
+        related_name='shops',
         verbose_name='Город магазина',
     )
     street = ForeignKey(
         Street,
         on_delete=CASCADE,
+        related_name='shops',
         verbose_name='Улица магазина',
     )
     house = PositiveSmallIntegerField(
