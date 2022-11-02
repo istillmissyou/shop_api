@@ -36,7 +36,7 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          context: test_guru
+          context: guru
           push: true
           tags: ssd256/test_guru:latest
   deploy:
