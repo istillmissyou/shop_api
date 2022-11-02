@@ -1,4 +1,4 @@
-name: Yamdb workflow
+name: Test_guru workflow
 on: [push]
 jobs:
   tests:
@@ -53,7 +53,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo systemctl stop nginx
-            sudo docker image pull ssd256/yamdb_final
+            sudo docker image pull ssd256/test_guru
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
