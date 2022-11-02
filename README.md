@@ -2,7 +2,7 @@
 ![Workflow](https://github.com/istillmissyou/test_guru/actions/workflows/test_guru_workflow.yaml/badge.svg)
 
 Проекто запущен на сервере
-![Доступ](http://158.160.11.215/)
+![Доступ](http://51.250.96.127/)
 
 ## Автор
 
