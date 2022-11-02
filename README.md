@@ -1,8 +1,8 @@
 # Тестовое задание для студии "INDEX"
-![Workflow](https://github.com/istillmissyou/test_guru/actions/workflows/test_guru_workflow.yaml/badge.svg)
+![Workflow](https://github.com/istillmissyou/test_guru/actions/workflows/test_guru_workflow.yml/badge.svg)
 
-Проекто запущен на сервере
-![Доступ](http://51.250.96.127/)
+Проект запущен на сервере (cloud.yandex.ru)
+![Доступ](http://51.250.104.235/)
 
 ## Автор
 
