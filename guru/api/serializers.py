@@ -1,5 +1,6 @@
 from rest_framework.serializers import ModelSerializer, SlugRelatedField
-from shops.models import City, Shop, Street
+
+from .models import City, Shop, Street
 
 
 class CitySerializer(ModelSerializer):
@@ -10,7 +11,7 @@ class CitySerializer(ModelSerializer):
 
 class StreetSerializer(ModelSerializer):
     city = SlugRelatedField(
-        queryset=City.objects.all(),
+        read_only=True,
         slug_field='name',
     )
 

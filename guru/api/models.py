@@ -16,12 +16,11 @@ class City(Model):
         verbose_name_plural = 'Города'
 
     def __str__(self):
-        return f'{self.name}'
+        return self.name
 
 
 class Street(Model):
     name = CharField(
-        unique=True,
         max_length=200,
         verbose_name='Название улицы',
         help_text='Введите название улицы',
@@ -44,7 +43,6 @@ class Street(Model):
 
 class Shop(Model):
     name = CharField(
-        unique=True,
         max_length=200,
         verbose_name='Название магазина',
         help_text='Введите название магазина',
