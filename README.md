@@ -2,7 +2,7 @@
 ![Workflow](https://github.com/istillmissyou/test_guru/actions/workflows/test_guru_workflow.yml/badge.svg)
 
 Проект запущен на сервере (cloud.yandex.ru)
-![Доступ](http://51.250.104.235/)
+http://51.250.104.235/
 
 ## Кандидат
 
