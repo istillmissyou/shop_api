@@ -1,12 +1,6 @@
-# Тестовое задание для студии "INDEX"
 ![Workflow](https://github.com/istillmissyou/test_guru/actions/workflows/test_guru_workflow.yml/badge.svg)
 
-Проект запущен на сервере (cloud.yandex.ru)
-http://51.250.104.235/
-
-## Кандидат
-
-Штунь Данил
+# API магазинов
 
 ## Описание
 
@@ -73,9 +67,11 @@ DB_PORT=порт для подключения к БД
 
 Клонировать репозиторий и перейти в директорию "infra" открыть файл docker-compose.yaml и в 11 строке поменять `image: ssd256/test_guru` на `build: .` Дальше в командной строке:
 
-```
+``` 
 sudo docker-compose up
 ```
 
 Проект запущен!
 
+## Автор
+Данил Штунь
