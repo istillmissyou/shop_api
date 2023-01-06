@@ -1,31 +1,29 @@
 ![Workflow](https://github.com/istillmissyou/test_guru/actions/workflows/test_guru_workflow.yml/badge.svg)
 
-# API магазинов
+# API shops
 
-## Описание
+## Description
 
-* **GET /api/v1/city/** — получение всех городов из базы
-* **POST /api/v1/city/** — создание города
-* **GET /api/v1/city/city_id/street/** —  получение всех улиц города; (city_id —
-идентификатор города)
-*  **POST /api/v1/city/city_id/street/** —  создание улицы в городе; (city_id —
-идентификатор города)
-* **POST /api/v1/shop/** —  создание магазина; Данный метод получает json c
-объектом магазина, в ответ возвращает данные созданной записи
-* **GET /api/v1/shop/?street=&city=&open=0/1** — получение списка магазинов.
-I. Метод принимает параметры для фильтрации. Параметры не обязательны. В
-случае отсутствия параметров выводится все магазины, если хоть один параметр
-есть, то по нему выполнятся фильтрации.
-II. Важно! В объекте каждого магазина выводится название города и улицы, а не id
-записей.
-III. Параметр open: 0 - закрыт, 1 - открыт. Данный статус определяет исход из
-параметров «Врем открытия», «Врем закрытия» и текущего времени сервера.
+* **GET /api/v1/city/** — getting all cities from the database
+* **POST /api/v1/city/** — creating a city
+* **GET /api/v1/city/city_id/street/** —  getting all the streets of the city
+* **POST /api/v1/city/city_id/street/** —  creating a street in the city
+* **POST /api/v1/shop/** —  creating a store; This method receives a json with
+a store object, returns the data of the created record in response
+* **GET /api/v1/shop/?street=&city=&open=0/1** — getting a list of stores.
+I. The method accepts parameters for filtering. Parameters are optional. If there
+are no parameters, all stores are displayed, if there is at least one parameter
+, then filtering will be performed on it.
+II. Important! The name of the city and street is displayed in the object of each store, not the id
+of the records.
+III. Parameter open: 0 - closed, 1 - open. This status determines the outcome of
+the parameters "Opening Time", "Closing Time" and the current server time.
 
-Использована технология JWT-токена
-* **POST /api/auth/users/** — создание пользователя
-* **POST /api/auth/jwt/create/** — передать username и password пользователя. В полученном токене скопировать "access" и вставить в Headers где `KEY` добавить `Authorization`, в поле `VALUE` добавить `Bearer access`, где access вставить с полученного токена. Теперь можно отправлять запросы!
+JWT token technology is used
+* **POST /api/auth/users/** — creating a user
+* **POST /api/auth/jwt/create/** — pass the username and password of the user. In the received token, copy "access" and paste it into Headers where `KEY` add `Authorization`, in the `VALUE` field add `Bearer access`, where access is inserted from the received token. Now you can send requests!
 
-## Использованные технологии
+## Technologies
 
 * Python 3.10.6
 * Django 4.1.2
@@ -33,15 +31,15 @@ III. Параметр open: 0 - закрыт, 1 - открыт. Данный с�
 * Simple-JWT 4.8.0
 * Gunicorn 20.1.0
 
-## Подготовительные действия
+## Preparatory actions
 
-Клонировать проект 
+Clone a project
 
 ```
-git clone https://github.com/istillmissyou/test_guru.git
+git clone https://github.com/istillmissyou/shop_api.git
 ```
 
-Установить Docker
+Install Docker
 
 ```
 sudo apt install docker.io
@@ -52,26 +50,24 @@ sudo apt install docker-compose
 ```
 
 
-### Шаблон наполнения env-файла
+### env file filling template
 
 ```
-DB_ENGINE=указываем, что работаем с postgresql
-DB_NAME=имя базы данных
-POSTGRES_USER=логин для подключения к базе данных
-POSTGRES_PASSWORD=пароль для подключения к БД (установите свой)
-DB_HOST=название сервиса (контейнера)
-DB_PORT=порт для подключения к БД 
+DB_ENGINE=indicate that we are working with postgresql
+DB_NAME=database name
+POSTGRES_USER=login to connect to the database
+POSTGRES_PASSWORD =password to connect to the database (set your own)
+DB_HOST=name of the service (container)
+DB_PORT=port for connecting to the database
 ```
 
-### Как запустить проект:
+### How to launch a project:
 
-Клонировать репозиторий и перейти в директорию "infra" открыть файл docker-compose.yaml и в 11 строке поменять `image: ssd256/test_guru` на `build: .` Дальше в командной строке:
+Clone the repository and go to the "infra" directory to open the docker-compose file.yaml and in line 11, change `image: ssd256/test_guru` to `build: .` Next on the command line:
 
 ``` 
 sudo docker-compose up
 ```
 
-Проект запущен!
-
-## Автор
-Данил Штунь
+## Author
+Danil Shtun
